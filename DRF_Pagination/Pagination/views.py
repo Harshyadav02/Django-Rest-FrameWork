@@ -10,6 +10,7 @@ class AJIOListAPIView(ListAPIView):
 
     queryset = AJIO.objects.all()
     serializer_class = AJIOSerializer 
+    search_fields = ('vendor_id','vendor_name')
     # pagination_class = PageNumberPagination
-    pagination_class = CustomPagination2
+    pagination_class = PageNumberPagination
 
